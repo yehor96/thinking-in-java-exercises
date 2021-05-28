@@ -39,3 +39,17 @@ m
 =src/main/java/com/chapters/strings/ex2/InfiniteRecursion.java,9\e\9e686fbfd04f2ec7d012b67e1a8c71c5e2648957
 k
 ;src/main/java/com/chapters/strings/ex1/SprinklerSystem.java,0\7\07cd89669556e4167bbea86fd3838a30ca06f53a
+U
+%src/main/java/com/rodents/Rodent.java,8\b\8b94fff837845f82b8e1c1f9d6b1ff7916f770d9
+Y
+)src/main/java/com/sasndwich/Sandwich.java,7\2\726ca72b58c8111d5933a2a5795731c867a40025
+d
+4src/main/java/com/vampirenumbers/VampireNumbers.java,a\c\ac4a317cdaac67f69b6bb78eadd829763f30a1ab
+S
+#src/main/java/com/rodents/Main.java,a\4\a4fac4204a1b7565077a1e5bb2dc3f810279b6bd
+U
+%src/main/java/com/rodents/Class2.java,7\3\73cb663f970a9ab3374cc8385add796cf01e0e30
+U
+%src/main/java/com/rodents/Class1.java,8\f\8f79f5d2f0a93a0e82828d8b560886525220b09b
+^
+.src/main/java/com/readablescanner/Charnik.java,7\4\7471743cdf4e4f7e96af2f33a725f3969286f880
