@@ -39,3 +39,7 @@ m
 =src/main/java/com/chapters/strings/ex2/InfiniteRecursion.java,9\e\9e686fbfd04f2ec7d012b67e1a8c71c5e2648957
 k
 ;src/main/java/com/chapters/strings/ex1/SprinklerSystem.java,0\7\07cd89669556e4167bbea86fd3838a30ca06f53a
+c
+3src/main/java/com/chapters/strings/ex4/Receipt.java,0\3\035dda2077bee99fa5150f657d9ef78765e17368
+_
+/src/main/java/com/chapters/strings/ex6/ex6.java,0\2\022453210c840a388b1adfe6f9e9c309ed4bc141
