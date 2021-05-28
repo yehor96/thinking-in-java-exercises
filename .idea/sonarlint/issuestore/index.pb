@@ -39,6 +39,7 @@ m
 =src/main/java/com/chapters/strings/ex2/InfiniteRecursion.java,9\e\9e686fbfd04f2ec7d012b67e1a8c71c5e2648957
 k
 ;src/main/java/com/chapters/strings/ex1/SprinklerSystem.java,0\7\07cd89669556e4167bbea86fd3838a30ca06f53a
+<<<<<<< HEAD
 U
 %src/main/java/com/rodents/Rodent.java,8\b\8b94fff837845f82b8e1c1f9d6b1ff7916f770d9
 Y
@@ -53,3 +54,7 @@ U
 %src/main/java/com/rodents/Class1.java,8\f\8f79f5d2f0a93a0e82828d8b560886525220b09b
 ^
 .src/main/java/com/readablescanner/Charnik.java,7\4\7471743cdf4e4f7e96af2f33a725f3969286f880
+c
+3src/main/java/com/chapters/strings/ex4/Receipt.java,0\3\035dda2077bee99fa5150f657d9ef78765e17368
+_
+/src/main/java/com/chapters/strings/ex6/ex6.java,0\2\022453210c840a388b1adfe6f9e9c309ed4bc141
