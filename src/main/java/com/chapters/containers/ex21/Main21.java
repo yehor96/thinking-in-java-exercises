@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main21 {
 
     public static void main(String[] args) {
-        String words = readFile("src\\main\\resources\\Words.txt");
+        String words = readFile("Words.txt");
 
         Map<String, Integer> dictionary = new HashMap<>();
         for(var each : words.split(" ")) {
