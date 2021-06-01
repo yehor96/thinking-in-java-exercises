@@ -1,5 +1,8 @@
 package com.chapters.typeinfo.ex7;
 
+//{Args: Candy Gum}
+import java.util.stream.Stream;
+
 class Candy {
     static {
         System.out.println("Loading Candy");
@@ -19,27 +22,21 @@ class Cookie {
 }
 
 public class SweetShop {
-    // args format: "Java SweetShop {0} {1} {2}"
+
     public static void main(String[] args) {
         System.out.println("inside main");
-        checkArgsValidity(args);
-
-
-
-        new Candy();
-        System.out.println("After creating Candy");
-        try {
-            Class.forName("com.chapters.typeinfo.ex7.Gum");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Couldn’t find Gum");
-        }
-        System.out.println("After Class.forName(\"Gum\")");
-        new Cookie();
-        System.out.println("After creating Cookie");
+        Stream.of(args).forEach(SweetShop::loadClassFromArg);
     }
 
-    public static void checkArgsValidity(String[] args) {
-        if (args.length < 3 || !(args[0] + args[1]).equals("Java SweetShop"))
-            throw new IllegalArgumentException();
+    public static void loadClassFromArg(String className) {
+
+        String packageName = SweetShop.class.getPackageName();
+        String fullClassName = packageName + "." + className;
+
+        try {
+            Class.forName(fullClassName);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Not found class with name " + className + ". Keep looking ...");
+        }
     }
 }
