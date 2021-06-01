@@ -1,7 +1,6 @@
-package com.chapters.typeinfo.ex3;
+package com.chapters.typeinfo.ex3_ex4;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
