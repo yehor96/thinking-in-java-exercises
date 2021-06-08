@@ -1,16 +1,5 @@
 package com.chapters.typeinfo.ex21;
 
-interface Interface {
-    void doSomething();
-    void somethingElse(String arg);
-}
-class RealObject implements Interface {
-    public void doSomething() {
-        System.out.println("doSomething"); }
-    public void somethingElse(String arg) {
-        System.out.println("somethingElse " + arg);
-    }
-}
 class SimpleProxy implements Interface {
     private final Interface proxied;
 
