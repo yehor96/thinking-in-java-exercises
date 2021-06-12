@@ -16,8 +16,8 @@ public class CharacterGenerator implements Generator<StoryCharacter> {
     }
 
     public StoryCharacter next(String superpower) {
-        int size = CharacterFactory.Character.values().length;
-        var randomCharacter = CharacterFactory.Character.values()[random.nextInt(size)];
+        var characterValues = CharacterFactory.Character.values();
+        var randomCharacter = characterValues[random.nextInt(characterValues.length)];
         return CharacterFactory.getCharacter(randomCharacter, superpower);
     }
 }
