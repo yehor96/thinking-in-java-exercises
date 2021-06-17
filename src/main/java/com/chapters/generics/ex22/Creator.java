@@ -5,16 +5,23 @@ import java.lang.reflect.InvocationTargetException;
 public class Creator<E> {
 
     private final Class<?> argType;
-    private final Object argument;
 
-    public Creator(Class<? extends E> argType, Object argument) {
+    public Creator(Class<E> argType) {
         this.argType = argType;
-        this.argument = argument;
     }
 
-    public <T> T createInstance(Class<? extends T> type) {
+    public E createWithInt(int argument) {
+        return createInstance(int.class, argument);
+    }
+
+    public E createWithString(String argument) {
+        return createInstance(String.class, argument);
+    }
+
+    @SuppressWarnings("unchecked")
+    private E createInstance(Class<?> typeParameter, Object argument) {
         try {
-            return type.getConstructor(argType).newInstance(argument);
+            return (E) argType.getConstructor(typeParameter).newInstance(argument);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new RuntimeException(e);
         } catch (NoSuchMethodException e) {

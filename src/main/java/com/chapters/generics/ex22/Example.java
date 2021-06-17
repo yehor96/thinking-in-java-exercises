@@ -2,10 +2,10 @@ package com.chapters.generics.ex22;
 
 public class Example {
 
-    private final int value;
+    private final Object value;
 
-    public Example() {
-        this(0);
+    public Example(String value) {
+        this.value = value;
     }
 
     public Example(int value) {
