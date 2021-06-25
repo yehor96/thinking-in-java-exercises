@@ -15,5 +15,9 @@ public class Pet {
     public Pet() {
         super();
     }
+
+    public void speak() {
+        System.out.println(getClass().getSimpleName() + " speaks loudly!");
+    }
 }
 
