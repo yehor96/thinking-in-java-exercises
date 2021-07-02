@@ -1,5 +1,6 @@
 package com.chapters.arrays.ex12_13;
 
+import com.chapters.arrays.ex15.BerylliumSphere;
 import com.chapters.typeinfo.ex12.cofee.Generator;
 
 public class CountingGenerator {
@@ -92,6 +93,14 @@ public class CountingGenerator {
             double result = value;
             value += 1.0;
             return result;
+        }
+    }
+
+    public static class BerylliumSphere implements Generator<com.chapters.arrays.ex15.BerylliumSphere> {
+
+        @Override
+        public com.chapters.arrays.ex15.BerylliumSphere next() {
+            return new com.chapters.arrays.ex15.BerylliumSphere();
         }
     }
 }
