@@ -97,7 +97,6 @@ public class CountingGenerator {
     }
 
     public static class BerylliumSphere implements Generator<com.chapters.arrays.ex15.BerylliumSphere> {
-
         @Override
         public com.chapters.arrays.ex15.BerylliumSphere next() {
             return new com.chapters.arrays.ex15.BerylliumSphere();
