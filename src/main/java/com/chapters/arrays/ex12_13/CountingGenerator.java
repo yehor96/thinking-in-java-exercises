@@ -5,7 +5,7 @@ import com.chapters.typeinfo.ex12.cofee.Generator;
 
 public class CountingGenerator {
 
-    private static final char[] CHARS = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").toCharArray();
+    public static final char[] CHARS = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").toCharArray();
 
     public static class Boolean implements Generator<java.lang.Boolean> {
         private boolean value = false;
