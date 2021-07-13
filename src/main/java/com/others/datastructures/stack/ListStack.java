@@ -30,7 +30,16 @@ public class ListStack<T> implements Stack<T> {
 
     @Override
     public boolean contains(T item) {
-        return data.contains(item);
+        boolean found = false;
+
+        for (int i = 0; i < pointer; i++) {
+            if (data.get(i).equals(item)) {
+                found = true;
+                break;
+            }
+        }
+
+        return found;
     }
 
     @Override
