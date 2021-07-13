@@ -3,6 +3,7 @@ package com.others.datastructures.helperapps;
 import com.others.datastructures.stack.ListStack;
 import com.others.datastructures.stack.Stack;
 
+//Originally from https://github.com/dlbunker/ps-data-structure-helpers
 public class CardStackApp {
     Stack<String> stack = new ListStack<>();
 

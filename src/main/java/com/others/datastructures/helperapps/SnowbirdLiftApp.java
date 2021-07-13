@@ -3,6 +3,7 @@ package com.others.datastructures.helperapps;
 import com.others.datastructures.queue.ListQueue;
 import com.others.datastructures.queue.Queue;
 
+//Originally from https://github.com/dlbunker/ps-data-structure-helpers
 public class SnowbirdLiftApp {
     Queue<Gad2Chair> gad2Lift = new ListQueue<>();
 
