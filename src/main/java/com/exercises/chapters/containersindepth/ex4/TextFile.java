@@ -11,9 +11,12 @@ import java.util.TreeSet;
 
 public class TextFile extends ArrayList<String> {
 
-    private static final String THIS_FILE_PATH = "src\\main\\java\\com\\chapters\\containersindepth\\ex4\\TextFile.java";
-    private static final String TEST_FILE_PATH = "src\\main\\resources\\Test.txt";
-    private static final String TEST_2_FILE_PATH = "src\\main\\resources\\Test2.txt";
+    private static final String THIS_FILE_PATH =
+            "src\\main\\java\\com\\exercises\\chapters\\containersindepth\\ex4\\TextFile.java";
+    private static final String TEST_FILE_PATH =
+            "src\\main\\resources\\Test.txt";
+    private static final String TEST_2_FILE_PATH =
+            "src\\main\\resources\\Test2.txt";
 
     // Read a file as a single string:
     public static String read(String fileName) {
