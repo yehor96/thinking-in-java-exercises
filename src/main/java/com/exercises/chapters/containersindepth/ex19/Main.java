@@ -1,6 +1,6 @@
 package com.exercises.chapters.containersindepth.ex19;
 
-import com.exercises.chapters.containersindepth.ex20.SimpleHashMap;
+import com.exercises.chapters.containersindepth.ex20_21.SimpleHashMap;
 import com.exercises.chapters.containersindepth.ex4.TextFile;
 
 import java.util.Map;

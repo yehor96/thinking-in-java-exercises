@@ -1,4 +1,4 @@
-package com.exercises.chapters.containersindepth.ex20;
+package com.exercises.chapters.containersindepth.ex20_21;
 
 import com.exercises.chapters.containersindepth.ex15.MapEntry;
 
@@ -54,9 +54,12 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         if (buckets[index] == null)
             return null;
 
-        for (MapEntry<K, V> iPair : buckets[index])
+        for (MapEntry<K, V> iPair : buckets[index]) {
+            int counter = 1;
+            System.out.println("Looking for next " + counter++);
             if (iPair.getKey().equals(key))
                 return iPair.getValue();
+        }
 
         return null;
     }

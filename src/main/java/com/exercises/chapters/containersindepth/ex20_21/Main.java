@@ -1,4 +1,4 @@
-package com.exercises.chapters.containersindepth.ex20;
+package com.exercises.chapters.containersindepth.ex20_21;
 
 import java.util.Map;
 
@@ -8,6 +8,8 @@ public class Main {
 
         map.put("Text", "1");
         map.put("Text", "2");
+        map.put("Text", "3");
         System.out.println(map.entrySet());
+        System.out.println(map.get("Text"));
     }
 }
