@@ -1,4 +1,4 @@
-package com.exercises.chapters.containersindepth.ex22;
+package com.exercises.chapters.containersindepth.ex23;
 
 import com.exercises.chapters.containersindepth.ex15.MapEntry;
 
@@ -10,7 +10,8 @@ import java.util.Set;
 
 public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
-    static final int SIZE = 997;
+    private static final int SIZE = 997;
+    private int length = 0;
 
     @SuppressWarnings("unchecked")
     LinkedList<MapEntry<K, V>>[] buckets = new LinkedList[SIZE];
@@ -39,23 +40,9 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
         if (!found) {
             buckets[index].add(pair);
+            length++;
         }
         return oldValue;
-    }
-
-    @Override
-    public V get(Object key) {
-        int index = Math.abs(key.hashCode()) % SIZE;
-
-        if (buckets[index] == null)
-            return null;
-
-        for (MapEntry<K, V> iPair : buckets[index]) {
-            if (iPair.getKey().equals(key))
-                return iPair.getValue();
-        }
-
-        return null;
     }
 
     @Override
@@ -75,6 +62,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
                     iPair.setValue(null);
                     iPair.setKey(null);
                 }
+                length--;
             }
         }
         return value;
@@ -83,6 +71,37 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     @Override
     public void clear() {
         buckets = new LinkedList[SIZE];
+        length = 0;
+    }
+
+    @Override
+    public int size() {
+        return length;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return length == 0;
+    }
+
+    @Override
+    public boolean containsKey(Object key) {
+        return get(key) != null;
+    }
+
+    @Override
+    public V get(Object key) {
+        int index = Math.abs(key.hashCode()) % SIZE;
+
+        if (buckets[index] == null)
+            return null;
+
+        for (MapEntry<K, V> iPair : buckets[index]) {
+            if (iPair.getKey().equals(key))
+                return iPair.getValue();
+        }
+
+        return null;
     }
 
     public Set<Entry<K, V>> entrySet() {
