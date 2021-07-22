@@ -19,6 +19,12 @@ public class MapEntry<K, V> implements Map.Entry<K, V> {
         return value;
     }
 
+    public K setKey(K k) {
+        K result = key;
+        key = k;
+        return result;
+    }
+
     public V setValue(V v) {
         V result = value;
         value = v;
