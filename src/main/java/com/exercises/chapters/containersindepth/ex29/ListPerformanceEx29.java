@@ -19,7 +19,7 @@ public class ListPerformanceEx29 {
 
     static {
         tests.add(new Test<>("add") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int listSize = tp.size;
                 for (int i = 0; i < loops; i++) {
@@ -31,7 +31,7 @@ public class ListPerformanceEx29 {
             }
         });
         tests.add(new Test<>("get") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 int loops = tp.loops * reps;
                 int listSize = list.size();
                 for (int i = 0; i < loops; i++)
@@ -40,7 +40,7 @@ public class ListPerformanceEx29 {
             }
         });
         tests.add(new Test<>("set") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 int loops = tp.loops * reps;
                 int listSize = list.size();
                 for (int i = 0; i < loops; i++)
@@ -49,7 +49,7 @@ public class ListPerformanceEx29 {
             }
         });
         tests.add(new Test<>("iteradd") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 final int LOOPS = 1000000;
                 int half = list.size() / 2;
                 ListIterator<String> it = list.listIterator(half);
@@ -59,7 +59,7 @@ public class ListPerformanceEx29 {
             }
         });
         tests.add(new Test<>("insert") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 int loops = tp.loops;
                 for (int i = 0; i < loops; i++)
                     list.add(5, String.valueOf(47)); // Minimize random-access cost
@@ -67,7 +67,7 @@ public class ListPerformanceEx29 {
             }
         });
         tests.add(new Test<>("remove") {
-            int test(List<String> list, TestParam tp) {
+            protected int test(List<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
                 for (int i = 0; i < loops; i++) {
@@ -81,7 +81,7 @@ public class ListPerformanceEx29 {
         });
 // Tests for queue behavior:
         qTests.add(new Test<>("addFirst") {
-            int test(LinkedList<String> list, TestParam tp) {
+            protected int test(LinkedList<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
                 for (int i = 0; i < loops; i++) {
@@ -93,7 +93,7 @@ public class ListPerformanceEx29 {
             }
         });
         qTests.add(new Test<>("addLast") {
-            int test(LinkedList<String> list, TestParam tp) {
+            protected int test(LinkedList<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
                 for (int i = 0; i < loops; i++) {
@@ -106,7 +106,7 @@ public class ListPerformanceEx29 {
         });
 
         qTests.add(new Test<>("rmFirst") {
-            int test(LinkedList<String> list, TestParam tp) {
+            protected int test(LinkedList<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
                 for (int i = 0; i < loops; i++) {
@@ -120,7 +120,7 @@ public class ListPerformanceEx29 {
         });
 
         qTests.add(new Test<>("rmLast") {
-            int test(LinkedList<String> list, TestParam tp) {
+            protected int test(LinkedList<String> list, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
                 for (int i = 0; i < loops; i++) {

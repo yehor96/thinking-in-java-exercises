@@ -8,5 +8,5 @@ public abstract class Test<C> {
         this.name = name;
     }
 
-    abstract int test(C container, TestParam tp);
+    protected abstract int test(C container, TestParam tp);
 }
