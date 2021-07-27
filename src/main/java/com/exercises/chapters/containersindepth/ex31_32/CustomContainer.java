@@ -1,24 +1,25 @@
-package com.exercises.chapters.containersindepth.ex31;
+package com.exercises.chapters.containersindepth.ex31_32;
 
 import java.util.AbstractList;
 import java.util.Iterator;
 
-public class StringContainer extends AbstractList<String> implements Iterable<String> {
+public class CustomContainer<T> extends AbstractList<T> implements Iterable<T> {
 
-    private String[] array;
+    private T[] array;
     private int head;
 
-    public StringContainer() {
+    public CustomContainer() {
         this(20);
     }
 
-    public StringContainer(int size) {
-        array = new String[size];
+    @SuppressWarnings("unchecked")
+    public CustomContainer(int size) {
+        array = (T[]) new Object[size];
         head = 0;
     }
 
     @Override
-    public boolean add(String item) {
+    public boolean add(T item) {
         if (head == array.length) {
             resize();
         }
@@ -27,7 +28,7 @@ public class StringContainer extends AbstractList<String> implements Iterable<St
     }
 
     @Override
-    public String get(int index) {
+    public T get(int index) {
         if (index <= head) {
             return array[index];
         } else {
@@ -35,7 +36,7 @@ public class StringContainer extends AbstractList<String> implements Iterable<St
         }
     }
 
-    public boolean contains(String item) {
+    public boolean contains(Object item) {
         for (int i = 0; i < head; i++) {
             if (array[i].equals(item)) {
                 return true;
@@ -45,12 +46,12 @@ public class StringContainer extends AbstractList<String> implements Iterable<St
     }
 
     @Override
-    public String remove(int index) {
+    public T remove(int index) {
         if (index >= head) {
             return null;
         }
 
-        String item = array[index];
+        T item = array[index];
         for (int i = index; i < head; i++) {
             array[i] = array[i + 1];
         }
@@ -58,14 +59,15 @@ public class StringContainer extends AbstractList<String> implements Iterable<St
         return item;
     }
 
+    @SuppressWarnings("unchecked")
     private void resize() {
-        String[] newArray = new String[array.length * array.length];
+        T[] newArray = (T[])new Object[array.length * array.length];
         System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
     }
 
     @Override
-    public Iterator<String> iterator() {
+    public Iterator<T> iterator() {
         return new Iterator<>() {
 
             private int pointer = 0;
@@ -76,7 +78,7 @@ public class StringContainer extends AbstractList<String> implements Iterable<St
             }
 
             @Override
-            public String next() {
+            public T next() {
                 return array[pointer++];
             }
         };

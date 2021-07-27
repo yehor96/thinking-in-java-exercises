@@ -1,9 +1,9 @@
-package com.exercises.chapters.containersindepth.ex31;
+package com.exercises.chapters.containersindepth.ex31_32;
 
 public class Main {
     public static void main(String[] args) {
 
-        StringContainer sc = new StringContainer();
+        CustomContainer<String> sc = new CustomContainer<>();
         sc.add("Text1");
         sc.add("Text2");
         sc.add("Text3");
