@@ -1,4 +1,6 @@
-package com.exercises.chapters.io.ex4;
+package com.exercises.chapters.io.ex4_5;
+
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,10 +12,12 @@ public class ProcessFilesNew {
 
     private final Strategy strategy;
     private String regex;
+    private int sizeCounter;
 
     public ProcessFilesNew(Strategy strategy, String regex) {
         this.regex = regex;
         this.strategy = strategy;
+        sizeCounter = 0;
     }
 
     public void start(String[] args) {
@@ -40,6 +44,12 @@ public class ProcessFilesNew {
     }
 
     public static void main(String[] args) {
-        new ProcessFilesNew(System.out::println, "pom.*").start(args);
+        long[] size = new long[1];
+
+        new ProcessFilesNew(file -> {
+            size[0] += FileUtils.sizeOf(file);
+            System.out.println(file);
+        }, "Main.java").start(args);
+        System.out.println("Total size of these files: " + size[0] + " bytes.");
     }
 }

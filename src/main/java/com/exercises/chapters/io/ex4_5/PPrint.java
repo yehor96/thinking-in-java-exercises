@@ -1,4 +1,4 @@
-package com.exercises.chapters.io.ex4;
+package com.exercises.chapters.io.ex4_5;
 
 import java.util.Arrays;
 import java.util.Collection;

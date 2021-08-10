@@ -1,4 +1,4 @@
-package com.exercises.chapters.io.ex4;
+package com.exercises.chapters.io.ex4_5;
 
 import java.io.File;
 import java.io.IOException;
