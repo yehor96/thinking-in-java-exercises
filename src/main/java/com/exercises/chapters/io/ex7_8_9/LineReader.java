@@ -1,5 +1,7 @@
 package com.exercises.chapters.io.ex7_8_9;
 
+import lombok.experimental.UtilityClass;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@UtilityClass
 public class LineReader {
 
     public static void readInto(String filename, Collection<String> collection) {
