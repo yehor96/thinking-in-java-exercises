@@ -16,7 +16,7 @@ public class Main {
         }
 
         LinkedList<String> lines = new LinkedList<>();
-        Reader.readInto(filename, lines);
+        LineReader.readInto(filename, lines);
 
         var listIterator = lines.listIterator(lines.size());
         while (listIterator.hasPrevious()) {

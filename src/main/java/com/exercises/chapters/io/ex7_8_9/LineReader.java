@@ -6,13 +6,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Reader {
+public class LineReader {
 
     public static void readInto(String filename, Collection<String> collection) {
         collection.addAll(readLines(filename));
+    }
+
+    public static void readInto(String filename, String separator, Map<String, String> map) {
+        map.putAll(readLines(filename).stream()
+                .collect(Collectors.toMap(
+                        l -> l.substring(0, l.indexOf(separator)),
+                        l -> l.substring(l.indexOf(separator) + 1))
+                ));
     }
 
     public static void readWordsInto(String filename, Collection<String> collection, String... words) {

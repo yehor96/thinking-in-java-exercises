@@ -1,0 +1,13 @@
+Bell=900
+ThermostatNight=0
+LightOn=200
+LightOff=400
+WaterOn=600
+WaterOff=800
+ThermostatDay=1400
+FansOn=2000
+FansOff=3000
+MistOn=3400
+MistOff=3600
+Restart=4000
+Terminate=10000
