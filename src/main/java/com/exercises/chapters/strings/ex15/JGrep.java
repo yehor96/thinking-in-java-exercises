@@ -1,6 +1,6 @@
 package com.exercises.chapters.strings.ex15;
 
-//{Args: src\main\java\com\chapters\strings\ex15\JGrep.java \b[Ssct]\w+ 2}
+//{Args: src\main\java\com\exercises\chapters\strings\ex15\JGrep.java \b[Ssct]\w+ 2}
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
