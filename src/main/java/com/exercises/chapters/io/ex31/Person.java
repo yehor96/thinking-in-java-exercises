@@ -46,8 +46,7 @@ public class Person {
     }
 
     // Make it human-readable:
-    public static void
-    format(OutputStream os, Document doc) throws Exception {
+    public static void format(OutputStream os, Document doc) throws Exception {
         Serializer serializer = new Serializer(os, "ISO-8859-1");
         serializer.setIndent(4);
         serializer.setMaxLength(60);
