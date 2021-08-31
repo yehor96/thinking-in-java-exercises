@@ -1,4 +1,6 @@
-package com.exercises.chapters.enums.ex3;
+package com.exercises.chapters.enums.ex4;
+
+import com.exercises.chapters.enums.ex3.Enums;
 
 public enum Meal2 {
     APPETIZER(Food.Appetizer.class),
