@@ -1,0 +1,42 @@
+package com.exercises.chapters.annotations.ex1;
+
+@DBTable(name = "MEMBER")
+public class Member {
+
+    @SQLString(30)
+    String firstName;
+
+    @SQLString(50)
+    String lastName;
+
+    @SQLInteger
+    Integer age;
+
+    @SQLString(value = 30, constraints = @Constraints(primaryKey = true))
+    String handle;
+
+    @SQLCharacter(name = "Member_Char", constraints = @Constraints(unique = true))
+    Character mainValue;
+
+    static int memberCount;
+
+    public String getHandle() {
+        return handle;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String toString() {
+        return handle;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+}
