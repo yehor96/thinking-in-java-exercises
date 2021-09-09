@@ -13,7 +13,7 @@ public class Main {
         List<Future<Integer>> results = new ArrayList<>();
         ExecutorService es = Executors.newFixedThreadPool(size);
         for (int i = 0; i < size; i++) {
-            results.add(es.submit(new MyTask(10)));
+            results.add(es.submit(new MyTask(5)));
         }
 
         for (var each : results) {
